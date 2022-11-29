@@ -20,7 +20,7 @@
 }
 
 .button_orange:hover {
-    background-color: rgba(210, 84, 25, 0.05);
+    border-color: rgba(210, 84, 25, 0.3);
 }
 
 .button_blue {
@@ -29,5 +29,5 @@
 }
 
 .button_blue:hover {
-    background-color: rgba(25, 118, 210, 0.05);
+    border-color: rgba(25, 118, 210, 0.3);
 }
