@@ -14,11 +14,15 @@ const DEFAULT_TODO_TASK = [
 
 const App = () => {
   const [todos, setTodos] = useState(DEFAULT_TODO_TASK);
+
+  const addTodo = ({ name, description }: Omit<Todo, 'checked' | 'id'>) => {
+    setTodos([...todos, { id: todos[todos.length - 1].id + 1, description, name, checked: false }]);
+  };
   return (
     <div className={styles.app_container}>
       <div className={styles.container}>
         <Header todoCount={todos.length} />
-      <TodoPanel/>
+        <TodoPanel addTodo={addTodo} />
       </div>
     </div>
   );
